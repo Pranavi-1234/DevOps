@@ -1,26 +1,15 @@
-import java.util.Scanner;
-
-public class addition {
-    public static void main(String[] args) {
-        // Create a Scanner object to read input from the user
-        Scanner scanner = new Scanner(System.in);
-
-        // Prompt the user to enter the first number
-        System.out.print("Enter the first number: ");
-        double num1 = scanner.nextDouble();
-
-        // Prompt the user to enter the second number
-        System.out.print("Enter the second number: ");
-        double num2 = scanner.nextDouble();
-
-        // Calculate the sum of the two numbers
-        double sum = num1 + num2;
-
-        // Display the result
-        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
-
-        // Close the scanner object to prevent resource leak
-        scanner.close();
-    }
+public class AddTwoNumbers {
+public static void main(String args[]) {
+if(args.length<2) {
+System.out.println("Please provide two numbers as arguments.");
+return;
 }
-
+// Parse the numbers from command-line arguments
+int num1 = Integer.parseInt(args[0]);
+int num2 = Integer.parseInt(args[1]);
+//Calculate the sum
+int sum = num1+num2;
+// Display the result
+System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+}
+}
